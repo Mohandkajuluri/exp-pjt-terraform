@@ -1,3 +1,3 @@
-bucket = "exp1-terraform-state"
-key    = "exp-pjt/prod/terraform.state"
+bucket = "myexp-terraform-state"
+key    = "exp-pjt/prod/terraform.tfstate"
 region = "us-east-1"

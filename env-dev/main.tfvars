@@ -15,3 +15,10 @@ account_id     = "965905745843"
 default_vpc_id = "vpc-05fb74ab188a4fe02"
 default_route_table_id = "rtb-05d0368c69638b04c"
 default_vpc_cidr = "172.31.0.0/16"
+
+allocated_storage    = "20"
+engine               = "mysql"
+engine_version       = "5.7.44"
+instance_class       = "db.t3.micro"
+
+

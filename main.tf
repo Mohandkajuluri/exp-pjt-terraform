@@ -18,9 +18,9 @@ module "rds" {
   source = "./modules/rds"
   env = var.env
   tags = var.tags
-  subnets = var.subnets
-  vpc_id = var.vpc_id
-  sg_cidrs = var.sg_cidrs
+  subnets = module.vpc.db_subnets
+  vpc_id = module.vpc.vpc_id
+  sg_cidrs = var.app_subnets
   rds_allocated_storage = var.rds_allocated_storage
   rds_engine = var.rds_engine
   rds_engine_version = var.rds_engine_version

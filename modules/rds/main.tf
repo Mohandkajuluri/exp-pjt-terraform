@@ -49,6 +49,5 @@ resource "aws_db_instance" "main" {
   storage_type         = "gp3"
   db_subnet_group_name = aws_db_subnet_group.main.name
   tags = merge(var.tags, { Name = "${var.env}-mysql-rds" })
-
 }
 

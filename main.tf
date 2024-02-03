@@ -30,7 +30,7 @@ module "rds" {
 
 module "app" {
   source = "./modules/app"
-  app_port       = "var.backend_app_port"
+  app_port       = "var.backend["app_port"]
   component      = "backend"
   env            = "var.env"
   instance_count = var.backend["instance_count"]

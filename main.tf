@@ -28,7 +28,7 @@ module "rds" {
 #  kms = var.kms
 }
 
-module "app" {
+module "backend" {
   source = "./modules/app"
   app_port       = var.backend["app_port"]
   component      = "backend"
@@ -39,5 +39,7 @@ module "app" {
   subnets        = module.vpc.app_subnets
   tags           = var.tags
   vpc_id         = module.vpc.vpc_id
+  bastion_cidrs  = var.bastion_cidrs
+
 }
 
